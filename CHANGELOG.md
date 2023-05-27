@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v0.0.2
+
+[compare changes](https://github.com/markthree/cgxb/compare/v0.0.1...v0.0.2)
+
+
+### 🚀 Enhancements
+
+  - 支持命令行自动创建文章 ([b475bdf](https://github.com/markthree/cgxb/commit/b475bdf))
+
+### 📖 Documentation
+
+  - 添加开发时说明 ([9396944](https://github.com/markthree/cgxb/commit/9396944))
+
+### 🏡 Chore
+
+  - 合并 CHANGELOG 文件 ([660c1db](https://github.com/markthree/cgxb/commit/660c1db))
+  - Add 2023/5/27 ([0f72a65](https://github.com/markthree/cgxb/commit/0f72a65))
+
+### ❤️  Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v0.0.1
 
 
