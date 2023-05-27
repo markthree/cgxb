@@ -3,6 +3,7 @@ import { defineConfig } from "vitepress";
 import { description } from "../../package.json";
 
 import type { DefaultTheme } from "vitepress";
+import { readFile, writeFile } from "fs/promises";
 
 export default defineConfig({
   lang: "zh-CN",
@@ -12,7 +13,7 @@ export default defineConfig({
   head: [["link", { rel: "icon", href: "/favicon.png" }]],
   themeConfig: {
     search: {
-      provider: 'local',
+      provider: "local",
     },
     logo: "logo.svg",
     footer: {
@@ -49,6 +50,7 @@ export default defineConfig({
 
         const sidebar = (themeConfig.sidebar = {}) as DefaultTheme.SidebarMulti;
 
+        let recentLink: string | undefined;
         const reg = /(.*?)\/(.*?)\/(.*)\.md/;
 
         for (const record of records) {
@@ -78,7 +80,9 @@ export default defineConfig({
           }
 
           // 重定向
-          (oldYearNav as DefaultTheme.NavItemWithLink).link = dayItem.link;
+          (oldYearNav as DefaultTheme.NavItemWithLink).link =
+            recentLink =
+              dayItem.link;
 
           if (!sidebar[yearItem.link]) {
             sidebar[yearItem.link] = [{
@@ -111,6 +115,19 @@ export default defineConfig({
           if (!hasDayItem) {
             monthSideBar.items?.unshift(dayItem);
           }
+        }
+
+        if (recentLink) {
+          const homePageFile = "docs/index.md";
+
+          const homePageMD = await readFile(homePageFile, {
+            encoding: "utf-8",
+          });
+
+          await writeFile(
+            homePageFile,
+            homePageMD.replace(/link:.*/, `link: ${recentLink}`),
+          );
         }
       },
       configureServer({ watcher, restart }) {
