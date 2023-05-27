@@ -25,7 +25,7 @@
     "dev": "vitepress dev docs",
     "gen": "node scripts/gen.js",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
+    "preview": "vitepress serve docs",
     "release": "changelogen --release && git push --follow-tags"
   },
   "devDependencies": {
