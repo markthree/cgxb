@@ -3,6 +3,7 @@ import { defineConfig } from "vitepress";
 import { description } from "../../package.json";
 
 import type { DefaultTheme } from "vitepress";
+
 export default defineConfig({
   lang: "zh-CN",
   title: "吃瓜小报",
@@ -15,12 +16,6 @@ export default defineConfig({
       message: "Released under the MIT License.",
       copyright: "Copyright © 2023 markthree",
     },
-    nav: [
-      {
-        text: "更新日志",
-        link: "https://github.com/markthree/cgxb/blob/main/CHANGELOG.md",
-      },
-    ],
     socialLinks: [
       {
         icon: "github",
@@ -44,9 +39,13 @@ export default defineConfig({
           onlyFiles: true,
         });
 
-        const nav = themeConfig.nav = [] as DefaultTheme.NavItem[];
-        const sidebar =
-          (themeConfig.sidebar = []) as DefaultTheme.SidebarItem[];
+        const nav = themeConfig.nav = [{
+          text: "更新日志",
+          link: "https://github.com/markthree/cgxb/blob/main/CHANGELOG.md",
+        }] as DefaultTheme.NavItem[];
+
+        const sidebar = (themeConfig.sidebar = {}) as DefaultTheme.SidebarMulti;
+
         const reg = /(.*?)\/(.*?)\/(.*)\.md/;
 
         for (const record of records) {
@@ -65,7 +64,6 @@ export default defineConfig({
             link: `${monthItem.link}${day}`,
           };
           let oldYearNav = nav.find((n) => n.text === yearItem.text);
-          const yearSideBar = sidebar.find((n) => n.text === yearItem.text);
 
           // 不存在 nav
           if (!oldYearNav) {
@@ -76,29 +74,40 @@ export default defineConfig({
             nav.unshift(oldYearNav);
           }
 
-          if (!yearSideBar) {
-            sidebar.unshift({
+
+          // 重定向
+          (oldYearNav as DefaultTheme.NavItemWithLink).link = dayItem.link;
+
+          if (!sidebar[yearItem.link]) {
+            sidebar[yearItem.link] = [{
               text: yearItem.text,
               items: [{
                 text: monthItem.text,
                 items: [dayItem],
               }],
-            });
-          } else {
-            const monthSideBar = yearSideBar.items ??= [];
+            }];
+            continue;
+          }
 
-            const oldMonthItem = monthSideBar.find((m) =>
-              m.text === monthItem.text
-            );
-            if (!oldMonthItem) {
-              monthSideBar.push({
-                text: monthItem.text,
-                items: [dayItem],
-              });
-            } else {
-              oldMonthItem.items!.push(dayItem);
-              (oldYearNav as DefaultTheme.NavItemWithLink).link = dayItem.link;
-            }
+          const monthSiderBarItems = sidebar[yearItem.link][0].items;
+
+          const monthSideBar = monthSiderBarItems!.find((m) =>
+            m.text === monthItem.text
+          );
+
+          if (!monthSideBar) {
+            monthSiderBarItems?.unshift({
+              text: monthItem.text,
+              items: [dayItem],
+            });
+            continue;
+          }
+
+          const hasDayItem = monthSideBar.items?.some((d) =>
+            d.text === dayItem.text
+          );
+          if (!hasDayItem) {
+            monthSideBar.items?.unshift(dayItem);
           }
         }
       },
