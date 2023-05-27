@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "每日更新的技术小报",
   "packageManager": "pnpm@8.5.1",
+  "type": "module",
   "engines": {
     "node": ">=v18.16.0"
   },
@@ -22,6 +23,7 @@
   },
   "scripts": {
     "dev": "vitepress dev docs",
+    "gen": "node scripts/gen.js",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
     "release": "changelogen --release && git push --follow-tags"
