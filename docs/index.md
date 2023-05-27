@@ -13,10 +13,9 @@ hero:
   actions:
     - theme: brand
       text: 阅读
-      link: /2023/
     - theme: alt
       text: 贡献
-      link: /python/
+      link: https://github.com/markthree/cgxb/pulls
 
 features:
   - title: 及时

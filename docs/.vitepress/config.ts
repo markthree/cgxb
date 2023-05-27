@@ -11,6 +11,9 @@ export default defineConfig({
   lastUpdated: true,
   head: [["link", { rel: "icon", href: "/favicon.png" }]],
   themeConfig: {
+    search: {
+      provider: 'local',
+    },
     logo: "logo.svg",
     footer: {
       message: "Released under the MIT License.",
@@ -73,7 +76,6 @@ export default defineConfig({
             };
             nav.unshift(oldYearNav);
           }
-
 
           // 重定向
           (oldYearNav as DefaultTheme.NavItemWithLink).link = dayItem.link;
