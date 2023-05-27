@@ -1,6 +1,6 @@
 {
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
-		"readme*": "license, .gitignore, type.d.ts, package.json, pnpm-lock.yaml, shims.d.ts, .npmrc, renovate.json"
+		"readme*": "license, .gitignore, type.d.ts, package.json, pnpm-lock.yaml, shims.d.ts, .npmrc, renovate.json, CHANGELOG.md"
 	}
 }
