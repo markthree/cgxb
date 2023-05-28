@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.3.1
+
+[compare changes](https://github.com/markthree/cgxb/compare/v0.3.0...v0.3.1)
+
+
+### 🩹 Fixes
+
+  - 修复自动发布 ([3034a18](https://github.com/markthree/cgxb/commit/3034a18))
+
+### ❤️  Contributors
+
+- Markthree <1801982702@qq.com>
+
 ## v0.0.3
 
 [compare changes](https://github.com/markthree/cgxb/compare/v0.2.0...v0.0.3)
