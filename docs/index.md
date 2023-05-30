@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 阅读
-      link: /2023/5/28
+      link: /2023/5/30
     - theme: alt
       text: 贡献
       link: https://github.com/markthree/cgxb/pulls
