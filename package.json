@@ -29,7 +29,6 @@
     "release": "node scripts/release.js"
   },
   "devDependencies": {
-    "@inquirer/prompts": "^1.2.3",
     "@types/node": "^20.2.5",
     "changelogen": "^0.5.3",
     "fast-glob": "^3.2.12",

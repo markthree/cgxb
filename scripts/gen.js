@@ -1,6 +1,6 @@
+import { join } from "path";
 import { existsSync } from "fs";
 import { writeFile } from "fs/promises";
-import { join, resolve } from "path";
 
 async function gen() {
   const now = new Date().toLocaleDateString();
