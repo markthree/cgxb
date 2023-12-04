@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@types/node':
-    specifier: ^20.9.5
-    version: 20.9.5
+    specifier: ^20.10.3
+    version: 20.10.3
   changelogen:
     specifier: ^0.5.5
     version: 0.5.5
@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^3.3.2
     version: 3.3.2
   vitepress:
-    specifier: 1.0.0-rc.30
-    version: 1.0.0-rc.30(@algolia/client-search@4.19.1)(@types/node@20.9.5)(search-insights@2.6.0)
+    specifier: 1.0.0-rc.31
+    version: 1.0.0-rc.31(@algolia/client-search@4.19.1)(@types/node@20.10.3)(search-insights@2.6.0)
 
 packages:
 
@@ -574,8 +574,8 @@ packages:
     resolution: {integrity: sha512-T5k6kTXak79gwmIOaDF2UUQXFbnBE0zBUzF20pz7wDYu0RQMzWg+Ml/Pz50214NsFHBITkoi5VtdjFZnJ2ijjA==}
     dev: true
 
-  /@types/node@20.9.5:
-    resolution: {integrity: sha512-Uq2xbNq0chGg+/WQEU0LJTSs/1nKxz6u1iemLcGomkSnKokbW1fbLqc3HOqCf2JP7KjlL4QkS7oZZTrOQHQYgQ==}
+  /@types/node@20.10.3:
+    resolution: {integrity: sha512-XJavIpZqiXID5Yxnxv3RUDKTN5b81ddNC3ecsA0SoFXz/QU8OGBwZGMomiq0zw+uuqbL/krztv/DINAQ/EV4gg==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -599,7 +599,7 @@ packages:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.2(@types/node@20.9.5)
+      vite: 5.0.2(@types/node@20.10.3)
       vue: 3.3.8
     dev: true
 
@@ -903,7 +903,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /chownr@2.0.0:
@@ -1125,14 +1125,6 @@ packages:
     dependencies:
       minipass: 3.3.6
     dev: true
-
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -1706,20 +1698,20 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shikiji-transformers@0.7.3:
-    resolution: {integrity: sha512-PHwONpNDUZm1n0j5alhJjelicGxPAOcZC2JjVbQhyG9gaSwrHII6dY3oM0wZMScL5o1h1RYKYPhClE+7QPHwPg==}
+  /shikiji-transformers@0.7.6:
+    resolution: {integrity: sha512-yTp+7JMD/aXbV9ndn14eo9IK/UNt8iDsLNyqlOmCtcldlkqWE9T2YKAlOHOTVaeDfYWUWZa2EgSXb/CBfepBrw==}
     dependencies:
-      shikiji: 0.7.3
-    dev: true
-
-  /shikiji@0.7.3:
-    resolution: {integrity: sha512-kMb6bfZ+VrTcVn35RGnYjCfRnnPvg08UUXnpVW5bqT5S8UyrrUtUJjhzQHkMi5k8N1aS/FO5YDl+sHRiRdtcLQ==}
-    dependencies:
-      hast-util-to-html: 9.0.0
+      shikiji: 0.7.6
     dev: true
 
   /shikiji@0.7.4:
     resolution: {integrity: sha512-N5dmPvyhH/zfcsuWysUEAMwRJDMz26LUns2VEUs5y4Ozbf5jkAODU0Yswjcf/tZAwpFnk5x3y34dupFMnF2+NA==}
+    dependencies:
+      hast-util-to-html: 9.0.0
+    dev: true
+
+  /shikiji@0.7.6:
+    resolution: {integrity: sha512-KzEtvSGQtBvfwVIB70kOmIfl/5rz1LC8j+tvlHXsJKAIdONNQvG1at7ivUUq3xUctqgO6fsO3AGomUSh0F+wsQ==}
     dependencies:
       hast-util-to-html: 9.0.0
     dev: true
@@ -1868,7 +1860,7 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite@5.0.2(@types/node@20.9.5):
+  /vite@5.0.2(@types/node@20.10.3):
     resolution: {integrity: sha512-6CCq1CAJCNM1ya2ZZA7+jS2KgnhbzvxakmlIjN24cF/PXhRMzpM/z8QgsVJA/Dm5fWUWnVEsmtBoMhmerPxT0g==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -1896,7 +1888,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.9.5
+      '@types/node': 20.10.3
       esbuild: 0.19.7
       postcss: 8.4.31
       rollup: 4.5.1
@@ -1904,8 +1896,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.0.0-rc.30(@algolia/client-search@4.19.1)(@types/node@20.9.5)(search-insights@2.6.0):
-    resolution: {integrity: sha512-OolAbFU2hjs0KuIpPq0wRd4vJlTMvrFgHSh/hB+XQid7U31KtB6F1NxWihMwKkwncpxu9mt2Somet5AGiyTgPA==}
+  /vitepress@1.0.0-rc.31(@algolia/client-search@4.19.1)(@types/node@20.10.3)(search-insights@2.6.0):
+    resolution: {integrity: sha512-ikH9pIjOOAbyoYAGBVfTz8TzuXp+UoWaIRMU4bw/oiTg8R65SbAaGKY84xx6TuL+f4VqUJ8lhzW82YyxSLvstA==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4.3.2
@@ -1928,8 +1920,8 @@ packages:
       minisearch: 6.3.0
       mrmime: 1.0.1
       shikiji: 0.7.4
-      shikiji-transformers: 0.7.3
-      vite: 5.0.2(@types/node@20.9.5)
+      shikiji-transformers: 0.7.6
+      vite: 5.0.2(@types/node@20.10.3)
       vue: 3.3.8
     transitivePeerDependencies:
       - '@algolia/client-search'
