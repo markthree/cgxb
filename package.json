@@ -2,10 +2,10 @@
   "name": "cgxb",
   "version": "0.3.1",
   "description": "每日更新的技术小报",
-  "packageManager": "pnpm@8.15.1",
+  "packageManager": "pnpm@8.15.4",
   "type": "module",
   "engines": {
-    "node": ">=18.19.0"
+    "node": ">=18.19.1"
   },
   "keywords": [
     "journal",
@@ -29,9 +29,9 @@
     "release": "node scripts/release.js"
   },
   "devDependencies": {
-    "@types/node": "^20.11.16",
+    "@types/node": "^20.11.27",
     "changelogen": "^0.5.5",
     "fast-glob": "^3.3.2",
-    "vitepress": "1.0.0-rc.42"
+    "vitepress": "1.0.0-rc.45"
   }
 }
