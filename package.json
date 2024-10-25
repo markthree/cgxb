@@ -29,7 +29,7 @@
     "release": "node scripts/release.js"
   },
   "devDependencies": {
-    "@types/node": "^20.16.12",
+    "@types/node": "^20.17.1",
     "changelogen": "^0.5.7",
     "fast-glob": "^3.3.2",
     "vitepress": "1.4.1"
