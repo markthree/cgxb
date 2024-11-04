@@ -29,9 +29,9 @@
     "release": "node scripts/release.js"
   },
   "devDependencies": {
-    "@types/node": "^20.17.1",
+    "@types/node": "^20.17.6",
     "changelogen": "^0.5.7",
     "fast-glob": "^3.3.2",
-    "vitepress": "1.4.1"
+    "vitepress": "1.5.0"
   }
 }
