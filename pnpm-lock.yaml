@@ -6,13 +6,13 @@ settings:
 
 devDependencies:
   '@types/node':
-    specifier: ^20.19.41
+    specifier: 20.19.41
     version: 20.19.41
   changelogen:
-    specifier: ^0.6.2
+    specifier: 0.6.2
     version: 0.6.2
   fast-glob:
-    specifier: ^3.3.3
+    specifier: 3.3.3
     version: 3.3.3
   vitepress:
     specifier: 1.6.4
